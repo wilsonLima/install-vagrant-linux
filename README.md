@@ -24,7 +24,7 @@ Tags da Role
 Variáveis da Role 
 --------------
 
-- vagrant_version: Versão do Vagrant, valor padrão: 2.2.19 .
+- vagrant_version: Versão do Vagrant, valor padrão: 2.3.4 .
 
 
 Dependências da Role 
