@@ -1,3 +1,4 @@
 ---
 
-vagrant_version: "2.3.4-1"
+vagrant_version_dir: "2.3.4"
+vagrant_version_bin: "2.3.4-1"
