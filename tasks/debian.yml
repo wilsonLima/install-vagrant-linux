@@ -3,7 +3,19 @@
 
 # Instalação do Vagrant
 
-- name: Instalando o Vagrant
+- name: "Instalando o Vagrant para uma arquitetura x86_64"
+  when: ansible_architecture == "x86_64"
+  apt:
+    deb: "https://releases.hashicorp.com/vagrant/{{ vagrant_version_dir }}/vagrant_{{ vagrant_version_bin }}_amd64.deb"
+    state: present
+    update_cache: yes
+  become: true
+  tags:
+    - vagrant
+
+
+- name: "Instalando o Vagrant para uma arquitetura diferente de x86_64"
+  when: not ansible_architecture == "x86_64"
   apt:
     deb: "https://releases.hashicorp.com/vagrant/{{ vagrant_version_dir }}/vagrant_{{ vagrant_version_bin }}_{{ ansible_architecture }}.deb"
     state: present
